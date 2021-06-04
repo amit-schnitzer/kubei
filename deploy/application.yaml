@@ -1,0 +1,28 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: "kubei"
+  labels:
+    app.kubernetes.io/name: "kubei"
+    app.kubernetes.io/version: "0.9.0"
+spec:
+  title: my kubei application 
+  icon: http://simpleicon.com/wp-content/uploads/rocket.png
+  additionalNamespaces: 
+    - "*"
+  selector:
+    matchLabels:
+     app.kubernetes.io/name: "kubei"
+  componentKinds: []
+  descriptor:
+    version: "0.9.0"
+    description: "Open-source vulnerabilities scanning and CIS Docker benchmark tool"
+  ports:
+    - serviceName: kubei
+      servicePort: 8080
+      localPort: 8080
+      applicationUrl: "http://kubei/view"
+  statusInfromers:
+    - kubei/deployment.apps/kubei
+    - kubei/service/kubei
+
