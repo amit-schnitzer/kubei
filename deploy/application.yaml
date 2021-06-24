@@ -1,4 +1,4 @@
-apiVersion: app.k8s.io/v1beta1
+apiVersion: kots.io/v1beta1
 kind: Application
 metadata:
   name: "kubei"
@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/version: "0.9.0"
 spec:
   title: my kubei application 
-  icon: http://simpleicon.com/wp-content/uploads/rocket.png
+  icon: https://www.portshift.io/wp-content/uploads/2020/03/icon-color.png
   additionalNamespaces: 
     - "*"
   selector:
@@ -17,12 +17,19 @@ spec:
   descriptor:
     version: "0.9.0"
     description: "Open-source vulnerabilities scanning and CIS Docker benchmark tool"
+    icons:
+      - src: https://www.portshift.io/wp-content/uploads/2020/03/icon-color.png
+        type: "image/png"
+    type: "kubei"
+    links:
+      - description: Portshift kubei scanner
+        url: "http://kubei:8080/view"
   ports:
     - serviceName: kubei
       servicePort: 8080
       localPort: 8080
       applicationUrl: "http://kubei/view"
   statusInfromers:
-    - kubei/deployment.apps/kubei
-    - kubei/service/kubei
+    - deployment.apps/kubei
+    - service/kubei
 
