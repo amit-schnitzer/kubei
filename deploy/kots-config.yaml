@@ -1,0 +1,9 @@
+apiVersion: kots.io/v1beta1
+kind: Config
+metadata:
+  name: config-sample
+spec:
+  groups:
+    - name: distribution
+          value: '{{repl Distribution}}'
+          hidden: true
