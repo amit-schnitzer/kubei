@@ -4,6 +4,17 @@ metadata:
   name: config-sample
 spec:
   groups:
-    - name: distribution
+    - name: config options
+      title: Configuration Options  
+      items:
+        - name: target_namespace
+          title: Define specific namespaces to scan (leave empty for all)
+          type: text
+          default: ''
+        - name: ignore_namespace
+          title: Define namespaces to skip scan for (leave empty for none)
+          type: text
+          default: ''
+        - name: distribution
           value: '{{repl Distribution}}'
           hidden: true
