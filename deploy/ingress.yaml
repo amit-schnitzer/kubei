@@ -8,11 +8,10 @@ spec:
   rules:
   - http:
       paths:
-        - path: /view
+        - path: /
           pathType: Prefix
           backend:
             service:
               name: kubei
               port:
                 number: 8080
-          
