@@ -10,5 +10,7 @@ spec:
       paths:
         - path: /view
           backend:
-            serviceName: kubei
-            servicePort: 8080
+            service: 
+              name: kubei
+              port:
+                number: 8080
