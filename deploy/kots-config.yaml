@@ -24,3 +24,5 @@ spec:
         - name: distribution
           value: '{{repl Distribution}}'
           hidden: true
+  TARGET_NAMESPACE: '{{repl ConfigOption "target_namespace" }}'
+  IGNORE_NAMESPACES: '{{repl ConfigOption "ignore_namespace" }}'
