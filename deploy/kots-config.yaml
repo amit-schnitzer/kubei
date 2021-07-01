@@ -15,6 +15,9 @@ spec:
           title: Define namespaces to skip scan for (leave empty for none)
           type: text
           default: ''
+    - name: Optional_Components
+      title: Artifactory Optional Components
+      items:
         - name: distribution
           value: '{{repl Distribution}}'
           hidden: true
