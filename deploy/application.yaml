@@ -19,4 +19,4 @@ spec:
     type: "kubei"
     links:
       - description: Open kubei UI
-        url: "http://kubei/view:8080"
+        url: "http://kubei:8080/view"
