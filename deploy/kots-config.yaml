@@ -18,8 +18,28 @@ spec:
         - name: explanation 
           type: label
           title: "Note: the system will scan according to the above configuration"
-    - name: Optional_Components
-      title: Artifactory Optional Components
+        - name: proxy_enabled
+          title: Connect Appliance to Proxy
+          type: bool
+          default: "0"
+        - name: proxy_host
+          title: Proxy Host
+          type: text
+          when: '{{repl (ConfigOptionEquals "proxy_enabled" "1")}}'
+        - name: proxy_port
+          title: Proxy Port
+          type: text
+          when: '{{repl (ConfigOptionEquals "proxy_enabled" "1")}}'
+        - name: proxy_username
+          title: Proxy Username
+          type: text
+          when: '{{repl (ConfigOptionEquals "proxy_enabled" "1")}}'
+        - name: proxy_password
+          title: Proxy Password
+          type: password
+          when: '{{repl (ConfigOptionEquals "proxy_enabled" "1")}}'
+    - name: hidden options
+      title: hidden items
       items:
         - name: distribution
           value: '{{repl Distribution}}'
