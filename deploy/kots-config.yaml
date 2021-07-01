@@ -15,6 +15,9 @@ spec:
           title: Define namespaces to skip scan for (leave empty for none)
           type: text
           default: ''
+        - name: explanation 
+          type: label
+          title: "Note: the system will scan according to the above configuration"
     - name: Optional_Components
       title: Artifactory Optional Components
       items:
