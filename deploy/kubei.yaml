@@ -212,7 +212,7 @@ spec:
         - name: "MAX_PARALLELISM" # max number of scans that will run simultaneously. defaults to 10
           value: "10"
         - name: "TARGET_NAMESPACE" # empty = scan all namespaces
-          value: 'repl {{configOption "target_namespace"}}'
+          value: repl {{configOption "target_namespace"}}
         - name: "SEVERITY_THRESHOLD" # minimum level of vulnerability to report. defaults to MEDIUM
           value: "MEDIUM"
         - name: "IGNORE_NAMESPACES" # a list of namespaces to ignore. defaults no namespace to ignore
